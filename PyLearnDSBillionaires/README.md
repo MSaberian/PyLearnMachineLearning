@@ -1,4 +1,4 @@
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/7b8d4ad0-67c6-412a-8eb9-cdeebdc371d2)# Data Science 4
+# Data Science 4
 
 ## Billionaires 
 
