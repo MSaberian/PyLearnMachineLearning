@@ -23,11 +23,9 @@ D. Ten countries with the least amount of wealth
 
 # Lionel Messi 🏃🏻‍♂️
 
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/729ad3d4-2685-4b52-9c41-724c2249de31)
-
 A. Number of goals per year
 
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/f3c466dd-a9c5-45e8-9b67-05d642f06183)
+![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/729ad3d4-2685-4b52-9c41-724c2249de31)
 
 B. The foot with which the penalty was taken.
 
