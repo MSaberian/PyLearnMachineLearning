@@ -31,7 +31,7 @@ A. Number of goals per year
 
 B. The foot with which the penalty was taken.
 
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/4e8545e1-2128-426c-b25b-3d77425186bc)
+![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/900c46e7-1c5e-4d44-967c-3ebd2116f1c1)
 
 C. What percentage of games in which Messi has scored in extra time have ended in victory
 
