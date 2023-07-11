@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class KNN:
     def __init__(self, k):
         self.k = k
@@ -10,15 +9,18 @@ class KNN:
         self.Y_train = Y
 
     def euclidean_distance(self, x1, x2):
+        
         return np.sqrt(np.sum((x1-x2)**2))
 
     def predict(self, X):
         results = []
         for x in X:
-            distances = []
-            for x_train in self.X_train:
-                d = self.euclidean_distance(x_train, x)
-                distances.append(d)
+            # distances = []
+            # distances = self.euclidean_distance(X_train, x)
+            distances = np.sqrt(np.sum((X_train-x)**2))
+            # for x_train in self.X_train:
+            #     d = self.euclidean_distance(x_train, x)
+            #     distances.append(d)
 
             nearest_neighbors = np.argsort(distances)[0:self.k]
             result = np.bincount(self.Y_train[nearest_neighbors])
