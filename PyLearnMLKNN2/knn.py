@@ -15,12 +15,7 @@ class KNN:
     def predict(self, X):
         results = []
         for x in X:
-            # distances = []
-            # distances = self.euclidean_distance(X_train, x)
             distances = np.sqrt(np.sum((X_train-x)**2))
-            # for x_train in self.X_train:
-            #     d = self.euclidean_distance(x_train, x)
-            #     distances.append(d)
 
             nearest_neighbors = np.argsort(distances)[0:self.k]
             result = np.bincount(self.Y_train[nearest_neighbors])
