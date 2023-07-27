@@ -1,52 +1,55 @@
-# K-Nearest Neighbors in ANSUR II dataset
+# Finding fishes and dataset with KNN algorithm.
 
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/b9f91e36-21d7-4ca3-bccc-523767d7e567)
+![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/9e5bc24f-770a-49d5-a7f6-134ba93fc0e6)
 
 
-## Show heights for women and men on same plot.
+## Finding Nemo.
 
-![hist](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/be5e483c-1433-4ec5-be9d-c745425284ec)
+input:
 
-### A. Why is the data of men higher than the data of women?
+![nemo7](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/2e7ddf4a-d0bf-4d47-93d7-5557ff5365ba)\
 
-Because data of male is more than female (1985 women and 4081 men, respectively).
+output:
 
-#‌## B. Why is the data of men more right than the data of women?
+![nemo8](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/e60ea264-173c-460f-92c6-7f9d51bf7092)
+![nemo9](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/557dc6c0-4089-4e25-8b14-4955efd2cfb6)
 
-Because men are taller. Mean stature in male is 175 cm and in female is 163 cm.
 
-For a better comparison, the following chart is suggested that has same density.
+## Finding Dory
 
-![hist density](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/b0054500-2d88-40c2-95fa-4aab952638e3)
+input:
 
-## Evaluate your KNN algorithm on the test dataset with different values of k = 3, 5, 7, 10 and 15.
+![dory1](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/f896af45-1bfd-42a7-857a-5d372cdc05d8)
 
-| k      | 3      | 5      | 7      | 10      | 15      |
+output:
+
+![dory](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/2feeb4c0-a973-4347-9c2f-9507b2ff78aa)
+
+#‌# IRIS dataset
+
+![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/5c2ae21a-3585-4238-a067-9fc3151b6d17)
+
+This data sets consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray
+
+The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width.
+
+Evaluate KNN algorithm on the test dataset with different values of k = 3, 5, 7, 11 and 15.
+
+| k      | 3      | 5     | 7     | 11     | 15     |
+| :---   | :----  | :---- | :---- | :----  | :----  |
+| Score  | 96.7%  | 100%  | 100%  | 100%   | 100%   |
+
+![Confusion Matrix](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/db8e218a-efa5-49e3-a8e0-1d8f08618866)
+
+
+## Breast Cancer dataset
+
+The breast cancer dataset is a classic and very easy binary classification dataset.
+
+Evaluate KNN algorithm on the test dataset with different values of k = 3, 5, 7, 11 and 15.
+
+| k      | 3      | 5      | 7      | 11      | 15      |
 | :---   | :----  | :----  | :----  | :----   | :----   |
-| Score  | 83.1%  | 84.7%  | 84.9%  | 85.2%   | 85.1%   |
+| Score  | 94.4%  | 95.6%  | 95.6%  | 95.6%   | 94.7%   |
 
-## Calculate confusion matrix for test dataset.
-
-![Confusion Matrix me](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/611b3ead-8e54-4248-8a29-d27fa0f6b810)
-
-## Evaluate the scikit-learn KNN algorithm on the test dataset. Make sure your accuracy is equal to scikit-learn's accuracy.
-
-| k                                                                      | 3      | 5      | 7      | 10      | 15      |
-| :---                                                                   | :----  | :----  | :----  | :----   | :----   |
-| Scores obtained by weight and stature features                         | 83.3%  | 84.5%  | 84.8%  | 85.2%   | 85.1%   |
-| Scores obtained by weight and Buttock Circumference features           | 97.9%  | 97.9%  | 98.1%  | 97.9%   | 97.9%   |
-| Scores obtained by weight, stature and Buttock Circumference features  | 97.3%  | 97.3%  | 97.7%  | 97.5%   | 97.4%   |
-
-## Plots
-
-![output](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/079bc31b-b5a5-4763-9ad8-6a035ea14b20)
-
-![Buttock Circumference](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/6c10e892-d031-4253-8814-8ae25727178c)
-
-![fvsm](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/7506c9dc-b2e7-450c-a060-0ee816b87f15)
-
-
-## Calculate confusion matrix for test dataset.
-
-![Confusion Matrix](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/f7d8693f-2d5b-4d11-9dda-01f4305076f6)
-
+![Confusion Matrix 2](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/8c04d637-5f60-4187-ba6b-82714bb92383)
