@@ -8,4 +8,8 @@
 
 ## Boston house prices
 
+correlation:
+![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/be0a46c7-1ab5-4a94-ad27-eb47734ac9db)
+
+
 ![boston](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/659bf7e8-d9de-43c1-a306-204bddb6729f)
