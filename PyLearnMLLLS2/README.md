@@ -23,6 +23,10 @@ Tehran House Price
 | sklearn results | 1191334095  | 2.00445e+18  | 1415789084  |
 | RidgeCV results | 1193205134  | 2.00379e+18  | 1415554607  |
 
+###  Why the MSE metric is a very large number?
+
+Because Y numbers are very large and reach the power of two.
+
 ## Dollar Rial Price 💰
 
 ### Divide dataset to Ahmadinejad, Rouhani and Raisi's presidency
