@@ -1,15 +1,50 @@
-# Linear Least Squares (LLS)
+# Linear Least Squares (LLS) III
 
-## Students Performance (Regression)
+## Tehran House Price
 
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/blob/main/PyLearnMLLLS/image.png" alt="image" width="500"/>
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/d9500d85-9f5b-4352-95f8-5f31f60c7860" alt="image" width="300"/>
 
-![study](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/8c78e81f-522d-4fc2-a58f-eb369bc10118)
+### Show the address of the 5 most expensive houses
 
-## Boston house prices
+| row          | address     | Price     | 
+| :---         | :----  | :---- | 
+| 1  | Zaferanieh  | 	9.240000e+10  | 
+| 2  | Abazar  | 	9.100000e+10  | 
+| 3  | Lavasan  | 	8.500000e+10  | 
+| 4  | Ekhtiarieh  | 	8.160000e+10  | 
+| 5  | Niavaran  | 		8.050000e+10  | 
 
-correlation:
-![image](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/be0a46c7-1ab5-4a94-ad27-eb47734ac9db)
+### Compare your result with Scikit-Learn's results
 
+Tehran House Price
+| Models          | MAE    | MSE     | RMAE     |
+| :---            | :----  | :---- | :---- |
+| my LLS results  | 1188244052  | 2.00026e+18  | 1414306447  |
+| sklearn results | 1191334095  | 2.00445e+18  | 1415789084  |
+| RidgeCV results | 1193205134  | 2.00379e+18  | 1415554607  |
 
-![boston](https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/659bf7e8-d9de-43c1-a306-204bddb6729f)
+###  Why the MSE metric is a very large number?
+
+Because Y numbers are very large and reach the power of two.
+
+## Dollar Rial Price 💰
+
+### Divide dataset to Ahmadinejad, Rouhani and Raisi's presidency
+
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/c04c0583-5325-48d7-8c88-572799990c79" alt="image" width="500"/>
+
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/96b609f4-4708-4fcc-b2f5-917361d9d2b8" alt="image" width="500"/>
+
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/fdad4c33-5ed3-48c5-839f-6b79be979f66" alt="image" width="500"/>
+
+### Show the highest dollar price in Ahmadinejad, Rouhani and Raisi's presidency respectively
+
+| Presidency          | Ahmadinejad    | Rouhani     | Ebram     |
+| :---            | :----  | :---- | :---- |
+| min  | 13350  | 28880  | 253830  |
+
+### Evaluate each model on test dataset using MAE loss function in Scikit-Learn
+
+| Presidency          | Ahmadinejad    | Rouhani     | Ebram     |
+| :---            | :----  | :---- | :---- |
+| MAE  | 2821  | 32299  | 34187  |
