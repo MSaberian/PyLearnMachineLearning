@@ -7,6 +7,12 @@ class MLP:
         self.H2 = MLPstructure.H2
         self.D_out = MLPstructure.D_out
         self.η = MLPstructure.η
+        self.W1 = None
+        self.W2 = None
+        self.W3 = None
+        self.B1 = None
+        self.B2 = None
+        self.B3 = None
 
     def sigmoid(self, x):
         return 1 / (1 + np.exp(-x))
@@ -22,10 +28,25 @@ class MLP:
     def root_mean_squired_error(self, Y_pred, Y_gt):
         return np.sqrt(np.mean((Y_pred - Y_gt) ** 2))
 
+    def predict(self, x):
+        # layer 1
+        net1 = x.T @ self.W1 + self.B1
+        out1 = self.sigmoid(net1)
+
+        # layer 2
+        net2 = out1 @ self.W2 + self.B2
+        out2 = self.sigmoid(net2)
+
+        # layer 3
+        net3 = out2 @ self.W3 + self.B3
+        out3 = self.softmax(net3)
+
+        return out3
+
     def fit(self, X_train, Y_train, X_test, Y_test, epochs=200):
 
-        W1, W2, W3 = np.random.randn(self.D_in, self.H1), np.random.randn(self.H1, self.H2), np.random.randn(self.H2, self.D_out)
-        B1, B2, B3 = np.random.randn(self.H1), np.random.randn(self.H2), np.random.randn(self.D_out)
+        self.W1, self.W2, self.W3 = np.random.randn(self.D_in, self.H1), np.random.randn(self.H1, self.H2), np.random.randn(self.H2, self.D_out)
+        self.B1, self.B2, self.B3 = np.random.randn(self.H1), np.random.randn(self.H2), np.random.randn(self.D_out)
 
         for epoch in range(epochs):
 
@@ -36,15 +57,15 @@ class MLP:
                 x = x.reshape(-1, 1)
 
                 # layer 1
-                net1 = x.T @ W1 + B1
+                net1 = x.T @ self.W1 + self.B1
                 out1 = self.sigmoid(net1)
 
                 # layer 2
-                net2 = out1 @ W2 + B2
+                net2 = out1 @ self.W2 + self.B2
                 out2 = self.sigmoid(net2)
 
                 # layer 3
-                net3 = out2 @ W3 + B3
+                net3 = out2 @ self.W3 + self.B3
                 out3 = self.softmax(net3)
 
                 y_pred = out3
@@ -58,28 +79,28 @@ class MLP:
                 grad_B3 = error
 
                 # layer 2
-                error = error @ W3.T * out2 * (1 - out2)
+                error = error @ self.W3.T * out2 * (1 - out2)
                 grad_W2 = out1.T @ error
                 grad_B2 = error
 
                 # layer 1
-                error = error @ W2.T * out1 * (1 - out1)
+                error = error @ self.W2.T * out1 * (1 - out1)
                 grad_W1 = x @ error
                 grad_B1 = error
 
                 # update
 
                 # layer 1
-                W1 = W1 - self.η * grad_W1
-                B1 = B1 - self.η * grad_B1
+                self.W1 = self.W1 - self.η * grad_W1
+                self.B1 = self.B1 - self.η * grad_B1
                 
                 # layer 2
-                W2 = W2 - self.η * grad_W2
-                B2 = B2 - self.η * grad_B2
+                self.W2 = self.W2 - self.η * grad_W2
+                self.B2 = self.B2 - self.η * grad_B2
 
                 # layer 3
-                W3 = W3 - self.η * grad_W3
-                B3 = B3 - self.η * grad_B3
+                self.W3 = self.W3 - self.η * grad_W3
+                self.B3 = self.B3 - self.η * grad_B3
 
             Y_pred = np.array(Y_pred).reshape(-1, 10)
             loss_train = self.root_mean_squired_error(Y_pred, Y_train)
@@ -94,15 +115,15 @@ class MLP:
                 x = x.reshape(-1, 1)
 
                 # layer 1
-                net1 = x.T @ W1 + B1
+                net1 = x.T @ self.W1 + self.B1
                 out1 = self.sigmoid(net1)
 
                 # layer 2
-                net2 = out1 @ W2 + B2
+                net2 = out1 @ self.W2 + self.B2
                 out2 = self.sigmoid(net2)
 
                 # layer 3
-                net3 = out2 @ W3 + B3
+                net3 = out2 @ self.W3 + self.B3
                 out3 = self.softmax(net3)
 
                 y_pred = out3
