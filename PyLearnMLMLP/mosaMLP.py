@@ -1,4 +1,5 @@
 import numpy as np
+from tqdm import tqdm
 
 class MLP:
     def __init__(self, MLPstructure):
@@ -13,6 +14,10 @@ class MLP:
         self.B1 = None
         self.B2 = None
         self.B3 = None
+        self.Losss_train = []
+        self.losss_test = []
+        self.accs_train = []
+        self.accs_test = []
 
     def sigmoid(self, x):
         return 1 / (1 + np.exp(-x))
@@ -34,7 +39,7 @@ class MLP:
         out1 = self.sigmoid(net1)
 
         # layer 2
-        net2 = out1 @ self.W2 + self.B2
+        net2 = out1 @ self.W2 + self.B2 
         out2 = self.sigmoid(net2)
 
         # layer 3
@@ -48,7 +53,12 @@ class MLP:
         self.W1, self.W2, self.W3 = np.random.randn(self.D_in, self.H1), np.random.randn(self.H1, self.H2), np.random.randn(self.H2, self.D_out)
         self.B1, self.B2, self.B3 = np.random.randn(self.H1), np.random.randn(self.H2), np.random.randn(self.D_out)
 
-        for epoch in range(epochs):
+        self.Losss_train = []
+        self.losss_test = []
+        self.accs_train = []
+        self.accs_test = []
+
+        for epoch in tqdm(range(epochs)):
 
             Y_pred = []
             for x, y in zip(X_train, Y_train):
@@ -133,7 +143,11 @@ class MLP:
             loss_test = self.root_mean_squired_error(Y_pred, Y_test)
             acc_test = np.mean(np.argmax(Y_pred, axis=1) == np.argmax(Y_test, axis=1))
 
-            print('loss train:', loss_train, 'acc train:', acc_train)
-            print('loss test:', loss_test, 'acc test:', acc_test)
+            self.Losss_train.append(loss_train)
+            self.losss_test.append(loss_test)
+            self.accs_train.append(acc_train)
+            self.accs_test.append(acc_test)
+            # print('loss train:', loss_train, 'acc train:', acc_train)
+            # print('loss test:', loss_test, 'acc test:', acc_test)
 
         print('train completed!')
