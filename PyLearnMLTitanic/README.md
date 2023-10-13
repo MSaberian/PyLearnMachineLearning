@@ -14,7 +14,7 @@ Calculate confusion matrix
 
 <img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/eb577dbd-3ccc-4c93-9193-5048d12f4144" alt="image" width="400"/>
 
-precision = 0.65, recall = 0.68
+precision = 0.68, recall = 0.65
 
 MLP (Multi Layer Perceptron)
 
