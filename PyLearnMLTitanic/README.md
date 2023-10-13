@@ -1,25 +1,25 @@
-# Perceptron 2 (Perception Neuron)
+# MLP using TensorFlow
 
-## Surgical 
+<img src="https://2205989719-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fu9ESMkINnUK9Z0nC4FPH%2Fuploads%2F4vBuP4YoXbj4UV1mwQAn%2Fimage.png?alt=media&token=f14097d1-cceb-47ed-acac-ba306081cba3" alt="image" width="700"/>
 
-Fit an object oriented perceptron algorithm on the surgical dataset for classification.
+## what sorts of people were more likely to survive? 
 
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/39566868-bd39-401d-86d5-8d86be83dc16" alt="image" width="700"/>
+| Algurithm     | Accuracy      |
+| :---   | :----  |
+| KNN  | 76.0%  |
+| Perceptron  | 80.4%  |
+| MLP (Multi Layer Perceptron)  | 83.8%  |
 
 Calculate confusion matrix
 
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/7db21959-6173-48cf-b71a-e07a1c691a62" alt="image" width="400"/>
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/eb577dbd-3ccc-4c93-9193-5048d12f4144" alt="image" width="400"/>
 
-Repeat the above steps with 5 different activation functions.
+precision = 0.65, recall = 0.68
 
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/b5a7ca8e-32d1-41f5-af31-4226be8a5d81" alt="image" width="400"/>
+MLP (Multi Layer Perceptron)
 
-## forecast
+<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/ee6a4b57-fb47-4dc2-92c9-082c8a9aaeb1" alt="image" width="400"/>
 
-The weather of a particular city is recorded once an hour during different years. Therefore, weather information has been recorded 24 times per day.
 
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/6d6b7eda-dc13-4c11-819e-6be2092ecfd2" alt="image" width="700"/>
-
-<img src="https://github.com/MSaberian/PyLearnMachineLearning/assets/43343453/f9bca151-9f82-4b3c-a0f5-771fc9a70449" alt="image" width="400"/>
 
 
